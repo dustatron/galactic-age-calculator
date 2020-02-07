@@ -8,6 +8,8 @@ export class AgeCalc {
     this.planetAges = [];
   }
 
+  getThisYearsDays() {}
+
   getTotalDays() {
     //return total days on the planet.
   }
