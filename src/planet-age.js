@@ -4,6 +4,7 @@ export class AgeCalc {
     this.birthMonth = month;
     this.birthYear = year;
     this.totalLife = life;
+    this.extraLongLife = false;
     this.totalDaysLived = 0;
     this.planetAges = {};
     this.lifeEnd = {};
@@ -87,12 +88,15 @@ export class AgeCalc {
     let currentDays = (this.date.getFullYear() - this.birthYear) * 365;
     let remainingLifeInDays = totalDays - currentDays;
     let orbits = this.planetRotations();
+    let that = this;
 
     if (currentDays > totalDays) {
+      // that.extraLongLife = true;
       for (const planet in orbits) {
         this.lifeEnd[planet] = ((currentDays - totalDays) / orbits[planet]).toFixed(2);
       }
     } else {
+      that.extraLongLife = false;
       for (const planet in orbits) {
         this.lifeEnd[planet] = (remainingLifeInDays / orbits[planet]).toFixed(2);
       }

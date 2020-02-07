@@ -7,6 +7,7 @@ describe("AgeCalc Object", () => {
     birthMonth: 2,
     birthYear: 1982,
     totalLife: 80,
+    extraLongLife: false,
     totalDaysLived: 0,
     planetAges: {},
     lifeEnd: {},
@@ -112,5 +113,17 @@ describe("AgeCalc Object", () => {
       shortLife.getRestOfLife();
       expect(shortLife.lifeEnd).toEqual(obj);
     });
+
+    test("should change extraLongLife to true if life is creater than expectancy", () => {
+      let longLife = new AgeCalc(14, 2, 2000, 10);
+      longLife.getRestOfLife();
+      expect(longLife.extraLongLife).toEqual(true);
+    });
+
+    // test("should change extraLongLife to true if life is creater than expectancy", () => {
+    //   let longLife = new AgeCalc(14, 2, 2000, 10);
+    //   longLife.getRestOfLife();
+    //   expect(longLife.extraLongLife).toEqual(true);
+    // });
   });
 });
