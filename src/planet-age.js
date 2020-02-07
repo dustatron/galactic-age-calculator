@@ -25,7 +25,15 @@ export class AgeCalc {
     return totalDays + day;
   }
 
-  getDaysToBirthday() {}
+  getDaysToBirthday() {
+    let monthTotals = this.monthsArr();
+    let totalDays = 0;
+
+    for (let i = 0; i < this.birthMonth - 1; i++) {
+      totalDays += monthTotals[i];
+    }
+    return totalDays + this.birthDay;
+  }
 
   getTotalDays() {
     //return total days on the planet.

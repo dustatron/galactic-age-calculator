@@ -21,8 +21,12 @@ describe("AgeCalc Object", () => {
   });
 
   describe("getDaysToBirthday", () => {
-    test("should return 45", () => {
+    let otherAge = new AgeCalc(17, 8, 2012, 80);
+    test("should return 45 for first birthday", () => {
       expect(ageCalc.getDaysToBirthday()).toEqual(45);
+    });
+    test("should return 229 for second birthday option", () => {
+      expect(otherAge.getDaysToBirthday()).toEqual(229);
     });
   });
 
