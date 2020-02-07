@@ -52,4 +52,11 @@ describe("AgeCalc Object", () => {
       expect(ageCalc.getAllAges()).toEqual(ages);
     });
   });
+
+  describe("getRestOfLife", () => {
+    test("should return object with years left on that planet", () => {
+      let lifeEnd = {};
+      expect(ageCalc.getRestOfLife()).toEqual(lifeEnd);
+    });
+  });
 });

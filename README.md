@@ -59,7 +59,7 @@ npm run start
 
 Behavoir | Input | Output
 :---------|:------:|:------:
-|1 - The program will take in a users age and return age on Mercury | 24 | 43 |
+|1 - The program will take in a users age and return age for planet. i.e. on Mercury | 24 | 43 |
 |2 - The program will allow a user to select a planet and return the age for that planet | Jupiter, age 24 | 284 |
 |3 - The program will take in a users life expectancy and return the year they have left on a planet | age 24/ epect to 80/ planet Mars | 105 |
 |4 - The program will return the number of years they have lived past the life expectancy if their age is greater than expectancy | age 89/ epect to 80/ planet Mars | 15 |

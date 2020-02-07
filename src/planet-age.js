@@ -61,7 +61,6 @@ export class AgeCalc {
   getAllAges() {
     let orbits = this.planetRotations();
     let usersDays = this.getTotalDays();
-    let orbitsArr = Object.entries(orbits);
     let ages = {
       mercury: 0,
       venus: 0,
@@ -77,10 +76,10 @@ export class AgeCalc {
     for (var planet in orbits) {
       ages[planet] = (usersDays / orbits[planet]).toFixed(2);
     }
-
-    // let ages = orbitsArr.map((item) => {
-    //   return [ item[0], (usersDays / item[1]).toFixed(2) ];
-    // });
     return ages;
+  }
+
+  getRestOfLife() {
+    //return years left;
   }
 } //end class
