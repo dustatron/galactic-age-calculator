@@ -5,7 +5,7 @@ export class AgeCalc {
     this.birthYear = year;
     this.totalLife = life;
     this.totalDays = "";
-    this.planetAges = [];
+    this.planetAges = {};
   }
 
   monthsArr() {
@@ -55,12 +55,13 @@ export class AgeCalc {
     let daysToDate = this.getThisYearsDays();
     let yearsLived = (date.getFullYear() - this.birthYear) * 365;
 
+    this.planetAges = yearsLived - birthdayDays + daysToDate;
     return yearsLived - birthdayDays + daysToDate;
   }
 
   getAllAges() {
     let orbits = this.planetRotations();
-    let usersDays = this.getTotalDays();
+    let usersDays = this.planetAges;
     let ages = {
       mercury: 0,
       venus: 0,
