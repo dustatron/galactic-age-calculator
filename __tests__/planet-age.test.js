@@ -7,7 +7,7 @@ describe("AgeCalc Object", () => {
     birthMonth: 2,
     birthYear: 1982,
     totalLife: 80,
-    totalDays: "",
+    totalDays: 0,
     planetAges: {},
     lifeEnd: {},
     date: new Date()
@@ -81,7 +81,17 @@ describe("AgeCalc Object", () => {
 
   describe("getRestOfLife", () => {
     test("should return object with years left on that planet", () => {
-      let lifeEndTest = {};
+      let lifeEndTest = {
+        earth: "41.98",
+        jupiter: "3.54",
+        mars: "22.31",
+        mercury: "174.20",
+        neptune: "0.26",
+        pluto: "0.17",
+        saturn: "1.43",
+        uranus: "0.50",
+        venus: "68.22"
+      };
       ageCalc.getRestOfLife();
       expect(ageCalc.lifeEnd).toEqual(lifeEndTest);
     });
