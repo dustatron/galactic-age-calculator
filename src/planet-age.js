@@ -60,6 +60,7 @@ export class AgeCalc {
   }
 
   getAllAges() {
+    this.getTotalDays();
     let orbits = this.planetRotations();
     let usersDays = this.planetAges;
     let ages = {
@@ -77,6 +78,7 @@ export class AgeCalc {
     for (var planet in orbits) {
       ages[planet] = (usersDays / orbits[planet]).toFixed(2);
     }
+    this.planetAges = ages;
     return ages;
   }
 

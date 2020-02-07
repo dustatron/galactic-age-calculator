@@ -7,15 +7,27 @@ $(document).ready(function() {
   $("form").submit((event) => {
     event.preventDefault();
 
-    let month = $("#month").val();
-    let day = $("#day").val();
-    let year = $("#year").val();
-    let life = $("#live").val();
+    let day = parseInt($("#day").val());
+    let month = parseInt($("#month").val());
+    let year = parseInt($("#year").val());
+    let life = parseInt($("#life").val());
 
-    console.log("click");
+    const ageCalc = new AgeCalc(day, month, year, life);
+    // console.log(ageCalc);
+    $(".hide").fadeIn();
+    presentData(ageCalc);
   });
 
-  $(".planets").on("click", "div", function() {
-    console.log(this);
-  });
+  function presentData(orbits) {
+    orbits.getAllAges();
+    orbits.getRestOfLife();
+
+    let planetsArr = Object.entries(orbits.planetAges);
+
+    planetsArr.forEach((planet) => {
+      console.log(planet);
+      $("#" + planet[0] + "-age").html(planet[1]);
+      $("#" + planet[0] + "-life").html(orbits.lifeEnd[planet[0]]);
+    });
+  }
 });
