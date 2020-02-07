@@ -1,17 +1,13 @@
-# _Webpack Boilerplate_
+# _Galactic Age Calculator_
 
-#### _This site comes with the all basic parts to get you started making a single page website with webpack fast. | Feb 5th. 2020_
+#### _This site calculate what a person's age would be on other planets in our solar system. | Feb 7th. 2020_
 
 #### By _** Dusty McCord**_
-[link to demo site coming](https://dustatron.github.io/webpack-boilerplate/)
+[link to demo site coming](#)
 
 ## Description
 
-There is a pre-built two input form with a submit button. There is also a simple jQuery function that will console.log when the submit button is clicked.
-
-The .gitignore file is a template for mac osx but a link is provided to get a template for any operating system. 
-
-[create a .gitignore template for your os here](https://www.gitignore.io/)
+Using webpack and test driven development this site will take in a user's age and allow them to select a planet from our solar system and see what their age would be on that planet. 
 
 ## Setup/Installation Requirements
 
@@ -33,7 +29,7 @@ cd desktop
  3. in terminal type '_git clone {link to repository}_ '
 
 ```sh
-git clone Link-Here
+git clone https://github.com/dustatron/galactic-age-calculator.git
 ```
 
 4. navigate to the new folder that was created on your desk
@@ -45,6 +41,7 @@ cd folder name
 ```sh
 npm install
 ```
+
 6. run development server
 ```sh
 npm run start
@@ -52,14 +49,8 @@ npm run start
 
 7. edit files in '/src' to make changes to the project.
 
-8. remove .git delete this projects commit history
-```sh
-rm -rf .git
-```
-9. start your new git repository 
-```sh
-git init
-```
+
+8. enjoy our planet aga app. 
 
 
 
@@ -68,8 +59,10 @@ git init
 
 Behavoir | Input | Output
 :---------|:------:|:------:
-|1 - The program will take in a simple input and return the input | 'hello' | 'hello' |
-
+|1 - The program will take in a users age and return age on mars | 24 | 43 |
+|2 - The program will allow a user to select a planet and return the age for that planet | Jupiter, age 24 | 284 |
+|3 - The program will take in a users life expectancy and return the year they have left on a planet | age 24/ epect to 80/ planet Mars | 105 |
+|4 - The program will return the number of years they have lived past the life expectancy if their age is greater than expectancy | age 89/ epect to 80/ planet Mars | 15 |
 
 ## Support 
 
