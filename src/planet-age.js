@@ -44,7 +44,7 @@ export class AgeCalc {
     return yearsLived - birthdayDays + daysToDate;
   }
 
-  getPlanetage() {
+  getAllAges() {
     //return age on this planet.
   }
 } //end class
