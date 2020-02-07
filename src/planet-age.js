@@ -25,6 +25,8 @@ export class AgeCalc {
     return totalDays + day;
   }
 
+  getDaysToBirthday() {}
+
   getTotalDays() {
     //return total days on the planet.
   }

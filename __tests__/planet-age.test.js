@@ -20,6 +20,12 @@ describe("AgeCalc Object", () => {
     });
   });
 
+  describe("getDaysToBirthday", () => {
+    test("should return 45", () => {
+      expect(ageCalc.getDaysToBirthday()).toEqual(45);
+    });
+  });
+
   // describe("getTotalDays", () => {
   //   let ageCalc = new AgeCalc(14, 2, 1982, 80);
 
