@@ -95,5 +95,9 @@ describe("AgeCalc Object", () => {
       ageCalc.getRestOfLife();
       expect(ageCalc.lifeEnd).toEqual(lifeEndTest);
     });
+
+    test("should return object with number of years that they lifed past their life expectancy", () => {
+      expect(ageCalc.lifeEnd).toEqual({});
+    });
   });
 });
