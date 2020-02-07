@@ -4,12 +4,11 @@ export class AgeCalc {
     this.birthMonth = month;
     this.birthYear = year;
     this.totalLife = life;
-    this.totalDays = 0;
+    this.totalDaysLived = 0;
     this.planetAges = {};
     this.lifeEnd = {};
     this.date = new Date();
   }
-
   monthsArr() {
     return [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];
   }
@@ -53,9 +52,10 @@ export class AgeCalc {
   getTotalDays() {
     let birthdayDays = this.getDaysToBirthday();
     let daysToDate = this.getThisYearsDays();
-    let yearsLived = (this.date.getFullYear() - this.birthYear) * 365;
+    let yearsLivedInDays = (this.date.getFullYear() - this.birthYear) * 365;
 
-    this.planetAges = yearsLived - birthdayDays + daysToDate;
+    this.planetAges = yearsLivedInDays - birthdayDays + daysToDate;
+    this.totalDaysLived = yearsLivedInDays;
     // return yearsLived - birthdayDays + daysToDate;
   }
 

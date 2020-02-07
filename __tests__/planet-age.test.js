@@ -7,7 +7,7 @@ describe("AgeCalc Object", () => {
     birthMonth: 2,
     birthYear: 1982,
     totalLife: 80,
-    totalDays: 0,
+    totalDaysLived: 0,
     planetAges: {},
     lifeEnd: {},
     date: new Date()
