@@ -8,6 +8,11 @@
   display: none;
 }
 
+.red-bold {
+  color: red;
+  font-weight: 800;
+}
+
 .planets {
   margin-top: 55px;
   display: flex;
@@ -18,8 +23,13 @@
     margin: 10px;
     border: 2px solid black;
     padding: 5px;
+    width: 30%;
     position: relative;
     border-radius: 4px;
+
+    @include respond(tab-port) {
+      width: 90%;
+    }
 
     p {
       margin: 5px;

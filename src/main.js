@@ -13,7 +13,6 @@ $(document).ready(function() {
     let life = parseInt($("#life").val());
 
     const ageCalc = new AgeCalc(day, month, year, life);
-    // console.log(ageCalc);
     $(".hide").fadeIn();
     presentData(ageCalc);
   });
@@ -25,9 +24,14 @@ $(document).ready(function() {
     let planetsArr = Object.entries(orbits.planetAges);
 
     planetsArr.forEach((planet) => {
-      console.log(planet);
       $("#" + planet[0] + "-age").html(planet[1]);
-      $("#" + planet[0] + "-life").html(orbits.lifeEnd[planet[0]]);
+      if (orbits.extraLongLife) {
+        $("#" + planet[0] + "-life").addClass("red-bold");
+        $("#" + planet[0] + "-life").html(orbits.lifeEnd[planet[0]] + " past expectancy");
+      } else {
+        $("#" + planet[0] + "-life").removeClass("red-bold");
+        $("#" + planet[0] + "-life").html(orbits.lifeEnd[planet[0]]);
+      }
     });
   }
 });
