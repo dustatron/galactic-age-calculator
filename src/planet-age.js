@@ -4,8 +4,15 @@ export class AgeCalc {
     this.birthMonth = month;
     this.birthYear = year;
     this.totalLife = life;
-    this.planet = planet;
+    this.totalDays = "";
+    this.planetAges = [];
   }
 
-  getTotalDays() {}
+  getTotalDays() {
+    //return total days on the planet.
+  }
+
+  getPlanetage() {
+    //return age on this planet.
+  }
 } //end class
