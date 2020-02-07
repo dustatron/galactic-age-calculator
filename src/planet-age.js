@@ -36,7 +36,12 @@ export class AgeCalc {
   }
 
   getTotalDays() {
-    //return total days on the planet.
+    let date = new Date();
+    let birthdayDays = this.getDaysToBirthday();
+    let daysToDate = this.getThisYearsDays();
+    let yearsLived = (date.getFullYear() - this.birthYear) * 365;
+
+    return yearsLived - birthdayDays + daysToDate;
   }
 
   getPlanetage() {
