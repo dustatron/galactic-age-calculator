@@ -8,7 +8,9 @@ describe("AgeCalc Object", () => {
     birthYear: 1982,
     totalLife: 80,
     totalDays: "",
-    planetAges: {}
+    planetAges: {},
+    lifeEnd: {},
+    date: new Date()
   };
   test("AgeCalc Object should instantiate with basic properties", () => {
     expect(ageCalc).toEqual(defaultObj);
@@ -77,10 +79,11 @@ describe("AgeCalc Object", () => {
     });
   });
 
-  // describe("getRestOfLife", () => {
-  //   test("should return object with years left on that planet", () => {
-  //     let lifeEnd = {};
-  //     expect(ageCalc.getRestOfLife()).toEqual(lifeEnd);
-  //   });
-  // });
+  describe("getRestOfLife", () => {
+    test("should return object with years left on that planet", () => {
+      let lifeEndTest = {};
+      ageCalc.getRestOfLife();
+      expect(ageCalc.lifeEnd).toEqual(lifeEndTest);
+    });
+  });
 });

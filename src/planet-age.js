@@ -6,6 +6,8 @@ export class AgeCalc {
     this.totalLife = life;
     this.totalDays = "";
     this.planetAges = {};
+    this.lifeEnd = {};
+    this.date = new Date();
   }
 
   monthsArr() {
@@ -28,9 +30,8 @@ export class AgeCalc {
 
   getThisYearsDays() {
     let monthTotals = this.monthsArr();
-    let date = new Date();
-    let month = date.getMonth();
-    let day = date.getDate();
+    let month = this.date.getMonth();
+    let day = this.date.getDate();
     let totalDays = 0;
 
     for (let i = 0; i < month; i++) {
@@ -50,13 +51,12 @@ export class AgeCalc {
   }
 
   getTotalDays() {
-    let date = new Date();
     let birthdayDays = this.getDaysToBirthday();
     let daysToDate = this.getThisYearsDays();
-    let yearsLived = (date.getFullYear() - this.birthYear) * 365;
+    let yearsLived = (this.date.getFullYear() - this.birthYear) * 365;
 
     this.planetAges = yearsLived - birthdayDays + daysToDate;
-    return yearsLived - birthdayDays + daysToDate;
+    // return yearsLived - birthdayDays + daysToDate;
   }
 
   getAllAges() {
