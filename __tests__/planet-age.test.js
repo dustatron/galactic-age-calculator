@@ -30,11 +30,9 @@ describe("AgeCalc Object", () => {
     });
   });
 
-  // describe("getTotalDays", () => {
-  //   let ageCalc = new AgeCalc(14, 2, 1982, 80);
-
-  //   test("should return days lived or 13833", () => {
-  //     expect(ageCalc.getTotalDays()).toEqual(13833);
-  //   });
-  // });
+  describe("getTotalDays", () => {
+    test("should return days lived or 13863", () => {
+      expect(ageCalc.getTotalDays()).toEqual(13863);
+    });
+  });
 });
