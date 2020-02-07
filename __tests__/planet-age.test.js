@@ -114,16 +114,16 @@ describe("AgeCalc Object", () => {
       expect(shortLife.lifeEnd).toEqual(obj);
     });
 
-    test("should change extraLongLife to true if life is creater than expectancy", () => {
+    test("should change extraLongLife to true if life is greater than expectancy", () => {
       let longLife = new AgeCalc(14, 2, 2000, 10);
       longLife.getRestOfLife();
       expect(longLife.extraLongLife).toEqual(true);
     });
 
-    // test("should change extraLongLife to true if life is creater than expectancy", () => {
-    //   let longLife = new AgeCalc(14, 2, 2000, 10);
-    //   longLife.getRestOfLife();
-    //   expect(longLife.extraLongLife).toEqual(true);
-    // });
+    test("should change extraLongLife to false if life not greater than expectancy", () => {
+      let longLife = new AgeCalc(14, 2, 2000, 50);
+      longLife.getRestOfLife();
+      expect(longLife.extraLongLife).toEqual(false);
+    });
   });
 });
