@@ -1,10 +1,30 @@
-  
 .box-decore {
-    margin-top: 55px;
-    padding: 25px;    
-    box-shadow: 1px 1px 15px -4px rgba(0,0,0,.2);
+  margin-top: 55px;
+  padding: 25px;
+  box-shadow: 1px 1px 15px -4px rgba(0, 0, 0, .2);
+}
+
+.planets {
+  margin-top: 55px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  div {
+    margin: 10px;
+    border: 2px solid black;
+    padding: 5px;
+    position: relative;
+    border-radius: 4px;
+
+    p {
+      margin: 5px;
+      font-weight: 700;
+    }
+
+    img {
+      width: 100%;
+      margin-bottom: 10px;
+    }
   }
-  
-  .output {
-    margin-top: 55px;
-  }
+}

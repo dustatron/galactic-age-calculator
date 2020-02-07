@@ -2,7 +2,11 @@
 <html>
 
 <head>
-  <title>Webpack</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Galactic Calculator</title>
 </head>
 
 <body>
@@ -10,21 +14,43 @@
     <!-- input form  -->
     <div class="row">
       <div class="col-md-6 offset-md-3 box-decore">
-        <h1 class="text-center">Webpack Boilerplate</h1>
+        <h1 class="text-center">Super Galactic Age Calculator</h1>
         <form>
           <div class="form-group">
-            <label for="input-1">Input 1</label>
-            <input type="text" class="form-control" id="input-1" aria-describedby="input">
-            <small id="input1-Help" class="form-text text-muted">You can put your thoughts here.</small>
+            <div class="form-row">
+              <div class="form-group col-md-4">
+                <label for="month">Birth Month</label>
+                <select id="month" class="form-control">
+                  <option selected>Choose...</option>
+                  <option>01</option>
+                  <option>02</option>
+                  <option>03</option>
+                  <option>04</option>
+                  <option>05</option>
+                  <option>06</option>
+                  <option>07</option>
+                  <option>08</option>
+                  <option>09</option>
+                  <option>10</option>
+                  <option>11</option>
+                  <option>12</option>
+                </select>
+              </div>
+              <div class="form-group col-md-4">
+                <label for="day">Birth Day</label>
+                <input type="number" class="form-control" id="day">
+              </div>
+              <div class="form-group col-md-4">
+                <label for="year">Year</label>
+                <input type="number" class="form-control" id="year">
+              </div>
+            </div>
           </div>
           <div class="form-group">
-            <label for="input-2">Input 2</label>
-            <input type="text" class="form-control" id="input-2">
+            <label for="Life">Life Expectancy</label>
+            <input type="Number" class="form-control" id="Life" value="90">
           </div>
-          <div class="form-group form-check">
-            <input type="checkbox" class="form-check-input" id="checkbox-1">
-            <label class="form-check-label" for="checkbox-1">Check me out</label>
-          </div>
+
           <button id="submitBtn" type="submit" class="btn btn-primary btn-lg btn-block">Submit</button>
         </form>
       </div>
@@ -32,8 +58,72 @@
 
     <!-- output box  -->
     <div class="row">
-      <div class="col-md-6 offset-md-3">
-        <div class="output">Output here</div>
+      <!-- <div class="col-md-12"> -->
+      <div class="planets">
+
+        <div id="mercury">
+          <h3>Mercury</h3>
+          <img src="https://source.unsplash.com/200x200/?mercury" alt="">
+          <p>Your Age : <span id="mercury-age">--</span></p>
+          <p>years remaining : <span id="mercury-life">--</span></p>
+        </div>
+
+        <div id="venus">
+          <h3>venus</h3>
+          <img src="https://source.unsplash.com/200x200/?venus" alt="">
+          <p>Your Age : <span id="venus-age">--</span></p>
+          <p>years remaining : <span id="venus-life">--</span></p>
+        </div>
+
+        <div id="earth">
+          <h3>earth</h3>
+          <img src="https://source.unsplash.com/200x200/?earth" alt="">
+          <p>Your Age : <span id="earth-age">--</span></p>
+          <p>years remaining : <span id="earth-life">--</span></p>
+        </div>
+
+
+        <div id="mars">
+          <h3>mars</h3>
+          <img src="https://source.unsplash.com/200x200/?mars" alt="">
+          <p>Your Age : <span id="mars-age">--</span></p>
+          <p>years remaining : <span id="mars-life">--</span></p>
+        </div>
+
+        <div id="jupiter">
+          <h3>jupiter</h3>
+          <img src="https://source.unsplash.com/200x200/?jupiter" alt="">
+          <p>Your Age : <span id="jupiter-age">--</span></p>
+          <p>years remaining : <span id="jupiter-life">--</span></p>
+        </div>
+
+        <div id="saturn">
+          <h3>saturn</h3>
+          <img src="https://source.unsplash.com/200x200/?saturn" alt="">
+          <p>Your Age : <span id="saturn-age">--</span></p>
+          <p>years remaining : <span id="saturn-life">--</span></p>
+        </div>
+
+        <div id="uranus">
+          <h3>uranus</h3>
+          <img src="https://source.unsplash.com/200x200/?uranus" alt="">
+          <p>Your Age : <span id="uranus-age">--</span></p>
+          <p>years remaining : <span id="uranus-life">--</span></p>
+        </div>
+
+        <div id="neptune">
+          <h3>neptune</h3>
+          <img src="https://source.unsplash.com/200x200/?neptune" alt="">
+          <p>Your Age : <span id="neptune-age">--</span></p>
+          <p>years remaining : <span id="neptune-life">--</span></p>
+        </div>
+        <div id="pluto">
+          <h3>pluto</h3>
+          <img src="https://source.unsplash.com/200x200/?pluto" alt="">
+          <p>Your Age : <span id="pluto-age">--</span></p>
+          <p>years remaining : <span id="pluto-life">--</span></p>
+        </div>
+        <!-- </div> -->
       </div>
     </div>
   </div>
