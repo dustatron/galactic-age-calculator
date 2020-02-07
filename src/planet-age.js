@@ -96,7 +96,7 @@ export class AgeCalc {
         this.lifeEnd[planet] = ((currentDays - totalDays) / orbits[planet]).toFixed(2);
       }
     } else {
-      // that.extraLongLife = false;
+      that.extraLongLife = false;
       for (const planet in orbits) {
         this.lifeEnd[planet] = (remainingLifeInDays / orbits[planet]).toFixed(2);
       }
