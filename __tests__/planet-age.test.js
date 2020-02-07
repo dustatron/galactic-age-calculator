@@ -14,7 +14,12 @@ describe("AgeCalc Object", () => {
     expect(ageCalc).toEqual(defaultObj);
   });
 
-  describe("planetRotations", () => {
+  describe("planetRotations and monthsArr", () => {
+    test("should return array of month lengths", () => {
+      let listOfMonths = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];
+      expect(ageCalc.monthsArr()).toEqual(listOfMonths);
+    });
+
     test("should return an object with all planet rotations", () => {
       let answer = {
         mercury: 88.0,
