@@ -14,6 +14,24 @@ describe("AgeCalc Object", () => {
     expect(ageCalc).toEqual(defaultObj);
   });
 
+  describe("planetRotations", () => {
+    test("should return an object with all planet rotations", () => {
+      let answer = {
+        mercury: 88.0,
+        venus: 224.7,
+        earth: 365.2,
+        mars: 687.0,
+        jupiter: 4331,
+        saturn: 10747,
+        uranus: 30589,
+        neptune: 59800,
+        pluto: 90560
+      };
+
+      expect(ageCalc.planetRotations()).toEqual(answer);
+    });
+  });
+
   describe("getThisYearsDays", () => {
     test("should return 38", () => {
       expect(ageCalc.getThisYearsDays()).toEqual(38);
