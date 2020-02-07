@@ -8,8 +8,12 @@ export class AgeCalc {
     this.planetAges = [];
   }
 
+  monthsArr() {
+    return [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];
+  }
+
   getThisYearsDays() {
-    let monthTotals = [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];
+    let monthTotals = this.monthsArr();
     let date = new Date();
     let month = date.getMonth();
     let day = date.getDate();
