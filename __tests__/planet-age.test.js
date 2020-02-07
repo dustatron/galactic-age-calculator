@@ -80,8 +80,8 @@ describe("AgeCalc Object", () => {
   });
 
   describe("getRestOfLife", () => {
-    test("should return object with years left on that planet", () => {
-      let lifeEndTest = {
+    test("should return object with years left on that planet, user expectancy at 80, user is 38", () => {
+      let obj = {
         earth: "41.98",
         jupiter: "3.54",
         mars: "22.31",
@@ -93,11 +93,24 @@ describe("AgeCalc Object", () => {
         venus: "68.22"
       };
       ageCalc.getRestOfLife();
-      expect(ageCalc.lifeEnd).toEqual(lifeEndTest);
+      expect(ageCalc.lifeEnd).toEqual(obj);
     });
 
-    test("should return object with number of years that they lifed past their life expectancy", () => {
-      expect(ageCalc.lifeEnd).toEqual({});
+    test("should return object with life expectancy of 10 years but person lived to 20", () => {
+      let obj = {
+        earth: "9.99",
+        jupiter: "0.84",
+        mars: "5.31",
+        mercury: "41.48",
+        neptune: "0.06",
+        pluto: "0.04",
+        saturn: "0.34",
+        uranus: "0.12",
+        venus: "16.24"
+      };
+      let shortLife = new AgeCalc(14, 2, 2000, 10);
+      shortLife.getRestOfLife();
+      expect(shortLife.lifeEnd).toEqual(obj);
     });
   });
 });
