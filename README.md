@@ -3,7 +3,7 @@
 #### _This site calculate what a person's age would be on other planets in our solar system. | Feb 7th. 2020_
 
 #### By _** Dusty McCord**_
-[link to demo site coming](#)
+[link to demo](https://hopeful-shirley-f48d46.netlify.com)
 
 ## Description
 
