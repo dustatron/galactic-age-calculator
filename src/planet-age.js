@@ -14,6 +14,7 @@ export class AgeCalc {
     return [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];
   }
 
+  //planet rotations
   planetRotations() {
     return {
       mercury: 88.0,
@@ -28,6 +29,7 @@ export class AgeCalc {
     };
   }
 
+  //returns current day count from jan 1st
   getThisYearsDays() {
     let monthTotals = this.monthsArr();
     let month = this.date.getMonth();

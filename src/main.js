@@ -7,6 +7,7 @@ $(document).ready(function() {
   $("form").submit((event) => {
     event.preventDefault();
 
+    //input values
     let day = parseInt($("#day").val());
     let month = parseInt($("#month").val());
     let year = parseInt($("#year").val());
@@ -17,12 +18,14 @@ $(document).ready(function() {
     presentData(ageCalc);
   });
 
+  //uses object data to print to DOM
   function presentData(orbits) {
     orbits.getAllAges();
     orbits.getRestOfLife();
 
     let planetsArr = Object.entries(orbits.planetAges);
 
+    //prints from object
     planetsArr.forEach((planet) => {
       $("#" + planet[0] + "-age").html(planet[1]);
       if (orbits.extraLongLife) {

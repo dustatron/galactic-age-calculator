@@ -1,7 +1,6 @@
 .box-decore {
   margin-top: 55px;
   padding: 25px;
-  box-shadow: 1px 1px 15px -4px rgba(0, 0, 0, .2);
 }
 
 .hide {
@@ -15,6 +14,7 @@
 
 .planets {
   margin-top: 55px;
+  margin-bottom: 10rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -22,10 +22,12 @@
   div {
     margin: 10px;
     border: 2px solid black;
-    padding: 5px;
+    padding: 15px;
     width: 30%;
     position: relative;
     border-radius: 4px;
+    box-shadow: 1px 1px 15px -4px rgba(255, 255, 255, 0.2);
+    background-color: rgba(43, 42, 42, 0.7);
 
     @include respond(tab-port) {
       width: 90%;
