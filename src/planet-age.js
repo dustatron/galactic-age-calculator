@@ -8,7 +8,9 @@ export class AgeCalc {
     this.totalDaysLived = 0;
     this.planetAges = {};
     this.lifeEnd = {};
-    this.date = new Date();
+    this.dateYear = new Date().getFullYear();
+    this.dateMonth = new Date().getMonth();
+    this.dateDay = new Date().getDate();
   }
   monthsArr() {
     return [ 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 ];
@@ -32,8 +34,9 @@ export class AgeCalc {
   //returns current day count from jan 1st
   getThisYearsDays() {
     let monthTotals = this.monthsArr();
-    let month = this.date.getMonth();
-    let day = this.date.getDate();
+    let month = this.dateMonth;
+    let day = this.dateDay;
+    console.log("day", this.dateDay, "month", this.dateMonth);
     let totalDays = 0;
 
     for (let i = 0; i < month; i++) {
@@ -42,6 +45,7 @@ export class AgeCalc {
     return totalDays + day;
   }
 
+  //returns total days to birthday from jan 1st.
   getDaysToBirthday() {
     let monthTotals = this.monthsArr();
     let totalDays = 0;
@@ -52,10 +56,11 @@ export class AgeCalc {
     return totalDays + this.birthDay;
   }
 
+  //returns current amount of days a user has lived.
   getTotalDays() {
     let birthdayDays = this.getDaysToBirthday();
     let daysToDate = this.getThisYearsDays();
-    let yearsLivedInDays = (this.date.getFullYear() - this.birthYear) * 365;
+    let yearsLivedInDays = (this.dateYear - this.birthYear) * 365;
 
     this.planetAges = yearsLivedInDays - birthdayDays + daysToDate;
     this.totalDaysLived = yearsLivedInDays;
@@ -87,7 +92,7 @@ export class AgeCalc {
 
   getRestOfLife() {
     let totalDays = this.totalLife * 365;
-    let currentDays = (this.date.getFullYear() - this.birthYear) * 365;
+    let currentDays = (this.dateYear - this.birthYear) * 365;
     let remainingLifeInDays = totalDays - currentDays;
     let orbits = this.planetRotations();
     let that = this;
